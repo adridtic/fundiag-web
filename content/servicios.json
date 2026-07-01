@@ -1,0 +1,36 @@
+{
+  "titulo": "Nuestros Servicios",
+  "intro": "Desarrollamos programas integrales diseñados para abordar las necesidades fundamentales de nuestra comunidad.",
+  "items": [
+    {
+      "titulo": "Agricultura",
+      "descripcion": "Fomentamos prácticas sostenibles para la seguridad alimentaria.",
+      "imagen": "https://lh3.googleusercontent.com/aida-public/AB6AXuDGLIjAQ2KOmFnGEIGK_3eAuFa7xjBhVy2huXu6vQyyPB5_ne_o3dYieuXTzbn5w-F9mxq3yxIigY8o0vIF08VaEjd820X0BX5-O8cS6-oRVs3tcRYrabbSog8MZQhu8P30md9jpZB6M9VqQfJRFYvy2JBq0IV6ccTBf7BHnADrHV8DItYEXnNNtE40zEEZRzo-eEg-xeGLCaZXrVMJxpOBMGcYv1DEdiFfJweeCMv3UkxTt6LyjPtB491YjlViM4JIbIgFHyGidQ4r"
+    },
+    {
+      "titulo": "Apicultura",
+      "descripcion": "Producción de miel y conservación de polinizadores.",
+      "imagen": "https://lh3.googleusercontent.com/aida-public/AB6AXuB1mjN4CJGxxhpVMZZCDsect3xnijsa694Th8sD3NHDsz_HcH8Dg_1WMYDpcvZU2Iep23LibK-CqIXuHmJlakItF8_r9-Y6priPTP0LQLcgaE6rQ0ZtVNYvuemSbnobAONfD4R09SHFhS9Cz3KK8Z59635hofRE3dRSts3VRFSCcugD57g4TbhGQ35WPjtil6c0KQqdOeb4-JhKmvnl4y6A5oHeBCxw94JcgGvVtM_xG9RpETD2QufuLcWW5BO1JzrBimiZ-Bf85duD"
+    },
+    {
+      "titulo": "Avicultura",
+      "descripcion": "Proyectos productivos de aves de corral para familias.",
+      "imagen": "https://lh3.googleusercontent.com/aida-public/AB6AXuAZv1ZqqVlXhHYb2DJob-7wljdzrka8E1sV-lIgiXtJeBc6RW_biu3YcEcii1U6fVriFmw3czH0Hpbm2Zw8vNvDNt2JdmFJeZI8nGFmIithJt9gOUHyLEMzg_Fmr1EVYAV_ABBKwpE9fKy2LvghAN8kLl1KCp4lrUtKgqywE-Om57YADqTpWt5Dcs4pNGLeAzu6SEeyYmWitlanKUTFWJx5bvqOadNzsqICi7j5pAB3V4XF4uyOp2fvV8OHVhjCOAJrGUZYWvZzOkdY"
+    },
+    {
+      "titulo": "Artesanías",
+      "descripcion": "Preservación de técnicas ancestrales y emprendimiento.",
+      "imagen": "https://lh3.googleusercontent.com/aida-public/AB6AXuBZE104CD-HnYpLu5Cir-BVoSXY1-yxlsj6FFMUDSpuO246niMdTIluD8lw1TBBlZxPD3ysIzBG5csXrNaC3MBae0FFEsBcgFfWj2tF92t9ACLDTef4kuSBcnrkNMYm5dls-MUdcnSMWVwLoiakjPgxQwgjhoIGovy2HjjpapZBxLWBKL6pEtkqj0hsCHRhQMsMyCFa2vrI0O07z_yW3Ay_8v7NPewNXXKqVBzSXTNR5kPeBI7dUN_gbL-goDQEow4kcFSlIC8BST9d"
+    },
+    {
+      "titulo": "Educación ambiental",
+      "descripcion": "Busca fomentar hábitos responsables y sostenibles que contribuyan a la conservación de los recursos naturales.",
+      "imagen": "https://lh3.googleusercontent.com/aida-public/AB6AXuAno92tOPh0cskkz5MlMdGJiPrMm_Vk4f7a9sF1BZja7DtBKmnmN_92jKynJRMBdl9Yy09O1_XW4SZho3rwYEigAHHebOnRrDeRcXP6lLwGOb5hTuomvKGuaJ2VhE5sHI-fE_kgJJcQP4obgubD1ggjkAuYjiYzT7di5fMlOMT0LXlLNYdC86QEuJZE1FdhBe71TRDdhDzi4ES3EtfZhRr3PK-b9JkZdg2Zmg6ze3ML_ptyVVNgGk8ubcmmRBQcqk_pnybJMGELamc8"
+    },
+    {
+      "titulo": "Conservación y restauración ecológica",
+      "descripcion": "Busca proteger y recuperar los ecosistemas y la biodiversidad para mantener su equilibrio natural.",
+      "imagen": "https://lh3.googleusercontent.com/aida-public/AB6AXuCExkBSKdkGFhL6VQLycdwwGwfBD4YhCVLDZLhos3cdT7TxvgrF1A5x8rQorLs5QsdXAh6Ld5bJvC9qMycz_de_bCrVOZFeXaz-HUnv9JGdCMVB5Ci5BjNQJaZAXdVZe0pQzToKagSnNYPLXatkBpunyYwjpqsfJLNRMWFRzr5IRnGCztZhziRSGb3ZX5RxpZi_scWDbo5q_Xxk5Xnqmz97Ly5hRT-MkXjob9cXGsNsbOy3NudareV_DXiL3hYRme6BS0seP9pnNl-4"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+# Configuración del administrador (Decap CMS)
+# IMPORTANTE: reemplaza los valores marcados con << >> siguiendo la GUIA.md
+
+backend:
+  name: git-gateway
+  repo: <<TU_USUARIO_GITHUB/fundiag-web>>
+  branch: main
+  identity_url: <<URL_IDENTITY_DE_DECAPBRIDGE>>
+  gateway_url: https://gateway.decapbridge.com
+  commit_messages:
+    create: Crear {{collection}} "{{slug}}"
+    update: Actualizar {{collection}} "{{slug}}"
+    delete: Eliminar {{collection}} "{{slug}}"
+    uploadMedia: Subir "{{path}}"
+    deleteMedia: Eliminar "{{path}}"
+
+# Para probar el admin en tu computador sin internet: ejecuta "npx decap-server"
+local_backend: true
+
+locale: es
+site_url: /
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "secciones"
+    label: "Secciones del sitio"
+    files:
+      - name: "general"
+        label: "General (portada, logo y contacto)"
+        file: "content/general.json"
+        fields:
+          - { label: "Nombre de la fundación", name: "nombre", widget: "string" }
+          - { label: "Eslogan", name: "eslogan", widget: "string" }
+          - { label: "Descripción para Google (SEO)", name: "descripcion_meta", widget: "text" }
+          - { label: "Logotipo", name: "logo", widget: "image" }
+          - label: "Portada (Hero)"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta superior", name: "badge", widget: "string" }
+              - { label: "Título — inicio", name: "titulo_inicio", widget: "string" }
+              - { label: "Título — palabra destacada (verde)", name: "titulo_destacado", widget: "string" }
+              - { label: "Título — final", name: "titulo_fin", widget: "string" }
+              - { label: "Párrafo", name: "parrafo", widget: "text" }
+              - { label: "Imagen de fondo", name: "imagen_fondo", widget: "image" }
+              - { label: "Imagen lateral", name: "imagen_lateral", widget: "image" }
+              - { label: "Cifra destacada", name: "stat_numero", widget: "string" }
+              - { label: "Texto de la cifra", name: "stat_texto", widget: "string" }
+          - label: "Contacto"
+            name: "contacto"
+            widget: "object"
+            fields:
+              - { label: "Correo electrónico", name: "email", widget: "string" }
+              - { label: "Teléfono", name: "telefono", widget: "string", required: false }
+              - { label: "Dirección", name: "direccion", widget: "string", required: false }
+              - { label: "Facebook (enlace)", name: "facebook", widget: "string", required: false }
+              - { label: "Instagram (enlace)", name: "instagram", widget: "string", required: false }
+              - { label: "WhatsApp (enlace)", name: "whatsapp", widget: "string", required: false }
+          - { label: "Descripción del pie de página", name: "footer_descripcion", widget: "string" }
+
+      - name: "nosotros"
+        label: "Nosotros (misión, visión y valores)"
+        file: "content/nosotros.json"
+        fields:
+          - { label: "Misión", name: "mision", widget: "text" }
+          - { label: "Imagen de la misión", name: "imagen_mision", widget: "image" }
+          - { label: "Visión", name: "vision", widget: "text" }
+          - label: "Valores"
+            name: "valores"
+            widget: "list"
+            field: { label: "Valor", name: "valor", widget: "string" }
+
+      - name: "servicios"
+        label: "Servicios"
+        file: "content/servicios.json"
+        fields:
+          - { label: "Título de la sección", name: "titulo", widget: "string" }
+          - { label: "Introducción", name: "intro", widget: "text" }
+          - label: "Lista de servicios"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Descripción", name: "descripcion", widget: "text" }
+              - { label: "Imagen", name: "imagen", widget: "image" }
+
+      - name: "casos"
+        label: "Casos de Éxito"
+        file: "content/casos.json"
+        fields:
+          - { label: "Título de la sección", name: "titulo", widget: "string" }
+          - label: "Proyectos"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Organización aliada", name: "organizacion", widget: "string", required: false }
+              - { label: "Icono (nombre de Material Symbols, ej. store, diversity_3)", name: "icono", widget: "string", default: "star", hint: "Busca nombres en fonts.google.com/icons" }
+              - { label: "Descripción", name: "descripcion", widget: "text" }
+              - label: "Etiquetas"
+                name: "etiquetas"
+                widget: "list"
+                required: false
+                field: { label: "Etiqueta", name: "etiqueta", widget: "string" }
+              - label: "Métricas"
+                name: "metricas"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Valor (ej. $320M, 120)", name: "valor", widget: "string" }
+                  - { label: "Etiqueta (ej. Familias)", name: "etiqueta", widget: "string" }
+
+      - name: "transparencia"
+        label: "Transparencia"
+        file: "content/transparencia.json"
+        fields:
+          - { label: "Título de la sección", name: "titulo", widget: "string" }
+          - { label: "Introducción", name: "intro", widget: "text" }
+          - label: "Documentos"
+            name: "documentos"
+            widget: "list"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Icono (Material Symbols)", name: "icono", widget: "string", default: "description" }
+              - { label: "Archivo PDF", name: "archivo", widget: "file", required: false, hint: "Si lo dejas vacío se mostrará 'Disponible próximamente'" }
+
+      - name: "donaciones"
+        label: "Donaciones"
+        file: "content/donaciones.json"
+        fields:
+          - { label: "Título de la ventana", name: "titulo", widget: "string" }
+          - { label: "Subtítulo", name: "subtitulo", widget: "string" }
+          - { label: "Correo que recibe las solicitudes", name: "email_destino", widget: "string" }
+          - label: "Montos sugeridos (COP)"
+            name: "montos"
+            widget: "list"
+            field: { label: "Monto", name: "monto", widget: "number", value_type: "int" }
+          - { label: "Mensaje de agradecimiento", name: "mensaje_exito", widget: "text" }

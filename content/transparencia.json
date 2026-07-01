@@ -1,0 +1,10 @@
+{
+  "titulo": "Transparencia y Recursos",
+  "intro": "La confianza es nuestro mayor activo. Accede a nuestros informes de gestión y documentos legales.",
+  "documentos": [
+    { "titulo": "Bienes y Servicios", "icono": "inventory_2", "archivo": "" },
+    { "titulo": "Código de Conducta", "icono": "verified_user", "archivo": "" },
+    { "titulo": "Equidad y Género", "icono": "group_add", "archivo": "" },
+    { "titulo": "Formato de Quejas", "icono": "feedback", "archivo": "" }
+  ]
+}

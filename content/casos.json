@@ -1,0 +1,26 @@
+{
+  "titulo": "Casos de Éxito e Impacto",
+  "items": [
+    {
+      "titulo": "Biotiendas y huertos comunitarios",
+      "organizacion": "PMA (WFP)",
+      "icono": "store",
+      "descripcion": "Establecimiento de 10 unidades agrícolas y 2 biotiendas para soberanía alimentaria.",
+      "etiquetas": ["Pueblos indígenas"],
+      "metricas": [
+        { "valor": "$320M", "etiqueta": "COP Ejecutados" },
+        { "valor": "10", "etiqueta": "Unidades" }
+      ]
+    },
+    {
+      "titulo": "Medios de vida para 120 familias",
+      "organizacion": "PMA (WFP)",
+      "icono": "diversity_3",
+      "descripcion": "120 unidades productivas, artesanías Kogui y producción colectiva de miel.",
+      "etiquetas": [],
+      "metricas": [
+        { "valor": "120", "etiqueta": "Familias" }
+      ]
+    }
+  ]
+}

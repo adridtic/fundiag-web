@@ -1,5 +1,4 @@
 # Configuración del administrador (Decap CMS)
-# IMPORTANTE: reemplaza los valores marcados con << >> siguiendo la GUIA.md
 
 backend:
   name: git-gateway
@@ -98,7 +97,7 @@ collections:
             fields:
               - { label: "Título", name: "titulo", widget: "string" }
               - { label: "Organización", name: "organizacion", widget: "string", required: false }
-              - { label: "Categoría (insignia sobre la foto, ej. Reforestación)", name: "categoria", widget: "string", required: false }
+              - { label: "Categoría (etiqueta verde, ej. Reforestación)", name: "categoria", widget: "string", required: false }
               - { label: "Icono (nombre de Material Symbols, ej. park, hive)", name: "icono", widget: "string", default: "star", hint: "Busca nombres en fonts.google.com/icons" }
               - { label: "Descripción", name: "descripcion", widget: "text" }
               - { label: "Métrica — etiqueta (ej. Impacto, Beneficiarios)", name: "metrica_etiqueta", widget: "string", required: false }
@@ -129,4 +128,7 @@ collections:
           - { label: "Subtítulo", name: "subtitulo", widget: "string" }
           - { label: "Correo que recibe las solicitudes", name: "email_destino", widget: "string" }
           - label: "Montos sugeridos (COP)"
-       
+            name: "montos"
+            widget: "list"
+            field: { label: "Monto", name: "monto", widget: "number", value_type: "int" }
+          - { label: "Mensaje de agradecimiento", name: "mensaje_exito", widget: "text" }

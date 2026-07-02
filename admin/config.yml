@@ -3,9 +3,9 @@
 
 backend:
   name: git-gateway
-  repo: <<TU_USUARIO_GITHUB/fundiag-web>>
+  repo: adridtic/fundiag-web
   branch: main
-  identity_url: <<URL_IDENTITY_DE_DECAPBRIDGE>>
+  identity_url: https://auth.decapbridge.com/sites/c71594a8-b845-4e1c-a1fc-da68b2498537
   gateway_url: https://gateway.decapbridge.com
   commit_messages:
     create: Crear {{collection}} "{{slug}}"
@@ -18,7 +18,8 @@ backend:
 local_backend: true
 
 locale: es
-site_url: /
+site_url: https://fundiag.netlify.app
+logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 

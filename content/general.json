@@ -1,18 +1,18 @@
 {
-  "nombre": "Fundiag",
+  "nombre": "FUNDIAG",
   "eslogan": "Transformación y Compromiso Social",
   "descripcion_meta": "Fundiag es una fundación comprometida con el desarrollo social sostenible: agricultura, apicultura, educación ambiental y proyectos productivos para comunidades vulnerables en Colombia.",
   "logo": "https://lh3.googleusercontent.com/aida-public/AB6AXuC9Mj3pg-u1IZrcSdfq7AIQKJA026tSRISQrBm7ucylt9XgNOWJVz42rOLsju-wYiYJCuSJLZ01c78QswLQYjvkKS4461BGMLITQTfAmi8YJf4EAnD-GzV4srfoFp1m04qsbUK5OqKlDS3FXlOjNSMQi0WYoPXUy2dSpc8KK29Vuca7yFjcxKJHyFjd7PoH80PgmuCOizcA7zAiJ18zBzXB04-vIbjUYf-XA8r5vPpTlXsAITms5H6ZGrJDnvq6vdQKjR1Ik7Q5pzkh",
   "hero": {
-    "badge": "Unidos por el Cambio",
-    "titulo_inicio": "Transformamos",
     "titulo_destacado": "Vidas",
-    "titulo_fin": "a través de la Solidaridad.",
-    "parrafo": "En Fundiag, creemos que la unión es la base del progreso social. Trabajamos incansablemente para brindar oportunidades y apoyo a quienes más lo necesitan.",
+    "badge": "Unidos por el Cambio",
     "imagen_fondo": "https://lh3.googleusercontent.com/aida-public/AB6AXuAqlOwaYajpTm7CIZ5pbzuj5-UDKbS5uLPtauY_8Ci7DF_uyPmmWdFiqVzQpnXW42FBFGvOQu9FfknPEQ4t-GBB3LUx-qkWqgJvvYb_FDvJQGRXSNEvkv0Fe9iomrq00r02-3SjkPdMv2u9bIPnQXMtWprBwyn4TmhuRAMdA8UaAM0j0OkDYB2blPsgcZynZLrNYnbWIeXHS1O0q3gVde2ZKlnbaSecTNE33qaqwlLyTRIFpbr2BiE8pkXrVLJ8_hXdWBCa0--MIeyG",
-    "imagen_lateral": "https://lh3.googleusercontent.com/aida-public/AB6AXuBG--RZkot_7rD9WIxm4GUPYLi4LcPZofpQhXb1AalweJ_fsm-uCpB3ek0WYYxemQ5f_ZTvc3G4oOPFV1sO6DtoHbxR_KcU0gL4BeGRzdOUqi1sPwBKbHR4fURVcmOM4hVFs7L7U5DXZkyks6YAt4Dh4znP3o3PNXy6NP_-6niAds4kQG6aEXPpdOY0Ae-MXsg-3XWHkC6BMBlOr3yMhZhoAlWyqGA_Pbn6OWBNalV4jdX4Y9Mz_A-cuRlhUPjhz5qdmmd1ktNZq_cG",
+    "titulo_fin": "a través de la Solidaridad.",
     "stat_numero": "+15,000",
-    "stat_texto": "Familias beneficiadas en toda la región durante el último año."
+    "titulo_inicio": "Transformamos",
+    "imagen_lateral": "https://lh3.googleusercontent.com/aida-public/AB6AXuBG--RZkot_7rD9WIxm4GUPYLi4LcPZofpQhXb1AalweJ_fsm-uCpB3ek0WYYxemQ5f_ZTvc3G4oOPFV1sO6DtoHbxR_KcU0gL4BeGRzdOUqi1sPwBKbHR4fURVcmOM4hVFs7L7U5DXZkyks6YAt4Dh4znP3o3PNXy6NP_-6niAds4kQG6aEXPpdOY0Ae-MXsg-3XWHkC6BMBlOr3yMhZhoAlWyqGA_Pbn6OWBNalV4jdX4Y9Mz_A-cuRlhUPjhz5qdmmd1ktNZq_cG",
+    "stat_texto": "Familias beneficiadas en toda la región durante el último año.",
+    "parrafo": "En Fundiag, creemos que la unión es la base del progreso social. Trabajamos incansablemente para brindar oportunidades y apoyo a quienes más lo necesitan."
   },
   "contacto": {
     "email": "fundeambienteygenero@gmail.com",

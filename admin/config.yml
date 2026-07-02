@@ -99,7 +99,6 @@ collections:
               - { label: "Organización", name: "organizacion", widget: "string", required: false }
               - { label: "Categoría (insignia sobre la foto, ej. Reforestación)", name: "categoria", widget: "string", required: false }
               - { label: "Icono (nombre de Material Symbols, ej. park, hive)", name: "icono", widget: "string", default: "star", hint: "Busca nombres en fonts.google.com/icons" }
-              - { label: "Fotografía", name: "imagen", widget: "image" }
               - { label: "Descripción", name: "descripcion", widget: "text" }
               - { label: "Métrica — etiqueta (ej. Impacto, Beneficiarios)", name: "metrica_etiqueta", widget: "string", required: false }
               - { label: "Métrica — valor (ej. 120 familias)", name: "metrica_valor", widget: "string", required: false }

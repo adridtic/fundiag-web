@@ -53,29 +53,36 @@
 
   function renderCasos(items) {
     document.getElementById("projects-carousel").innerHTML = items
-      .map(
-        (c) => `<article class="flex-none w-[300px] md:w-[380px] snap-center bg-white rounded-2xl shadow-md border border-outline-variant overflow-hidden flex flex-col group hover:shadow-xl transition-all">
-          <div class="relative h-48 overflow-hidden bg-surface-container">
-            <img alt="${esc(c.titulo)}" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="${esc(c.imagen || "")}" />
-            ${c.categoria ? `<div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">${esc(c.categoria)}</div>` : ""}
-          </div>
+      .map((c, i) => {
+        const iconoBg = i % 2 === 0
+          ? "bg-primary/10 text-primary"
+          : "bg-secondary-container/30 text-secondary";
+        return `<article class="flex-none w-[320px] md:w-[400px] snap-start bg-white rounded-2xl shadow-md border border-outline-variant overflow-hidden flex flex-col hover:shadow-xl transition-all">
           <div class="p-6 flex-grow flex flex-col">
-            <div class="flex items-center gap-2 mb-3">
-              <span class="material-symbols-outlined text-primary text-lg" aria-hidden="true">${esc(c.icono || "star")}</span>
-              <span class="text-xs font-bold text-secondary uppercase">${esc(c.organizacion || "")}</span>
-            </div>
-            <h3 class="font-heading text-lg font-semibold leading-tight text-primary mb-3">${esc(c.titulo)}</h3>
-            <p class="text-sm text-on-surface-variant mb-6">${esc(c.descripcion)}</p>
-            <div class="mt-auto pt-4 border-t border-outline-variant flex justify-between items-center">
-              <div class="flex flex-col">
-                <span class="text-xs text-on-surface-variant">${esc(c.metrica_etiqueta || "")}</span>
-                <span class="text-sm font-bold text-primary">${esc(c.metrica_valor || "")}</span>
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 rounded-2xl ${iconoBg} flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined" aria-hidden="true">${esc(c.icono || "star")}</span>
               </div>
-              <span class="text-xs font-medium text-on-surface-variant">${esc(c.aliado || "")}</span>
+              <div>
+                <h3 class="font-heading text-lg font-semibold leading-tight text-primary">${esc(c.titulo)}</h3>
+                <p class="text-xs font-semibold text-on-surface-variant mt-1">${esc(c.organizacion || "")}</p>
+              </div>
             </div>
+            <p class="text-sm text-on-surface-variant mb-4">${esc(c.descripcion)}</p>
+            ${c.categoria ? `<div class="flex flex-wrap gap-2"><span class="px-3 py-1 rounded-full bg-secondary-container/30 text-on-secondary-container text-xs font-semibold">${esc(c.categoria)}</span></div>` : ""}
           </div>
-        </article>`
-      )
+          <div class="bg-surface-container-low p-6 border-t border-outline-variant flex justify-between gap-8">
+            <div class="flex flex-col">
+              <span class="text-sm font-bold ${i % 2 === 0 ? "text-primary" : "text-secondary"}">${esc(c.metrica_valor || "")}</span>
+              <span class="text-[10px] uppercase tracking-wider text-on-surface-variant">${esc(c.metrica_etiqueta || "")}</span>
+            </div>
+            ${c.aliado ? `<div class="flex flex-col text-right">
+              <span class="text-sm font-bold text-primary">${esc(c.aliado)}</span>
+              <span class="text-[10px] uppercase tracking-wider text-on-surface-variant">Aliado</span>
+            </div>` : ""}
+          </div>
+        </article>`;
+      })
       .join("");
   }
 

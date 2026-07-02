@@ -90,26 +90,20 @@ collections:
         file: "content/casos.json"
         fields:
           - { label: "Título de la sección", name: "titulo", widget: "string" }
+          - { label: "Introducción", name: "intro", widget: "text" }
           - label: "Proyectos"
             name: "items"
             widget: "list"
             fields:
               - { label: "Título", name: "titulo", widget: "string" }
-              - { label: "Organización aliada", name: "organizacion", widget: "string", required: false }
-              - { label: "Icono (nombre de Material Symbols, ej. store, diversity_3)", name: "icono", widget: "string", default: "star", hint: "Busca nombres en fonts.google.com/icons" }
+              - { label: "Organización", name: "organizacion", widget: "string", required: false }
+              - { label: "Categoría (insignia sobre la foto, ej. Reforestación)", name: "categoria", widget: "string", required: false }
+              - { label: "Icono (nombre de Material Symbols, ej. park, hive)", name: "icono", widget: "string", default: "star", hint: "Busca nombres en fonts.google.com/icons" }
+              - { label: "Fotografía", name: "imagen", widget: "image" }
               - { label: "Descripción", name: "descripcion", widget: "text" }
-              - label: "Etiquetas"
-                name: "etiquetas"
-                widget: "list"
-                required: false
-                field: { label: "Etiqueta", name: "etiqueta", widget: "string" }
-              - label: "Métricas"
-                name: "metricas"
-                widget: "list"
-                required: false
-                fields:
-                  - { label: "Valor (ej. $320M, 120)", name: "valor", widget: "string" }
-                  - { label: "Etiqueta (ej. Familias)", name: "etiqueta", widget: "string" }
+              - { label: "Métrica — etiqueta (ej. Impacto, Beneficiarios)", name: "metrica_etiqueta", widget: "string", required: false }
+              - { label: "Métrica — valor (ej. 120 familias)", name: "metrica_valor", widget: "string", required: false }
+              - { label: "Aliado (ej. PNUD, Promigas S.A.)", name: "aliado", widget: "string", required: false }
 
       - name: "transparencia"
         label: "Transparencia"
@@ -123,7 +117,9 @@ collections:
             fields:
               - { label: "Título", name: "titulo", widget: "string" }
               - { label: "Icono (Material Symbols)", name: "icono", widget: "string", default: "description" }
-              - { label: "Archivo PDF", name: "archivo", widget: "file", required: false, hint: "Si lo dejas vacío se mostrará 'Disponible próximamente'" }
+              - { label: "Descripción breve", name: "descripcion", widget: "text", required: false }
+              - { label: "Enlace (Google Drive u otra URL)", name: "enlace", widget: "string", required: false, hint: "Pega aquí el enlace de Drive. Tiene prioridad sobre el archivo subido." }
+              - { label: "Archivo PDF (alternativa al enlace)", name: "archivo", widget: "file", required: false, hint: "Si no hay enlace ni archivo se mostrará 'Disponible próximamente'" }
 
       - name: "donaciones"
         label: "Donaciones"
@@ -133,7 +129,4 @@ collections:
           - { label: "Subtítulo", name: "subtitulo", widget: "string" }
           - { label: "Correo que recibe las solicitudes", name: "email_destino", widget: "string" }
           - label: "Montos sugeridos (COP)"
-            name: "montos"
-            widget: "list"
-            field: { label: "Monto", name: "monto", widget: "number", value_type: "int" }
-          - { label: "Mensaje de agradecimiento", name: "mensaje_exito", widget: "text" }
+       

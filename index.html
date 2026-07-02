@@ -170,21 +170,21 @@
       <!-- Casos de Éxito -->
       <section class="py-24 lg:py-32 bg-surface overflow-hidden" id="casos-de-exito">
         <div class="max-w-container mx-auto px-6">
-          <div class="text-center mb-16 fade-in-up">
-            <h2 class="font-heading text-headline-lg text-primary mb-4" data-bind="casos.titulo"></h2>
-            <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
-          </div>
-          <div class="relative">
-            <div class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 no-scrollbar scroll-smooth" id="projects-carousel" tabindex="0" aria-label="Carrusel de casos de éxito"></div>
-            <div class="flex justify-center gap-4 mt-2">
-              <button id="carousel-prev" aria-label="Proyecto anterior" class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+          <div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-8 fade-in-up">
+            <div class="text-center md:text-left">
+              <h2 class="font-heading text-headline-lg text-primary mb-2" data-bind="casos.titulo"></h2>
+              <p class="text-on-surface-variant max-w-xl" data-bind="casos.intro"></p>
+            </div>
+            <div class="flex gap-4">
+              <button id="carousel-prev" aria-label="Proyecto anterior" class="w-12 h-12 rounded-full border border-primary text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-sm">
                 <span class="material-symbols-outlined" aria-hidden="true">chevron_left</span>
               </button>
-              <button id="carousel-next" aria-label="Proyecto siguiente" class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+              <button id="carousel-next" aria-label="Proyecto siguiente" class="w-12 h-12 rounded-full border border-primary text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-sm">
                 <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
               </button>
             </div>
           </div>
+          <div class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 no-scrollbar scroll-smooth" id="projects-carousel" tabindex="0" aria-label="Carrusel de casos de éxito"></div>
         </div>
       </section>
 
@@ -240,7 +240,7 @@
       class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/50 backdrop-blur-sm transition-opacity duration-300 opacity-0"
       id="donation-modal" role="dialog" aria-modal="true" aria-labelledby="donation-title"
     >
-      <div class="bg-surface w-full max-w-xl rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+      <div class="bg-surface w-full max-w-xl rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[85vh]">
         <div class="hidden flex-col items-center justify-center p-12 text-center space-y-6 h-full" id="donation-success">
           <div class="w-20 h-20 bg-secondary-container/30 rounded-full flex items-center justify-center text-secondary">
             <span class="material-symbols-outlined text-5xl" aria-hidden="true">volunteer_activism</span>
@@ -250,7 +250,7 @@
           <button class="bg-primary text-white text-label-lg font-semibold px-10 py-3 rounded-full hover:scale-105 transition-all" data-close-modal>Cerrar</button>
         </div>
         <div class="flex flex-col" id="modal-content">
-          <div class="p-6 border-b border-outline-variant flex justify-between items-center bg-surface-container-low">
+          <div class="px-6 py-4 border-b border-outline-variant flex justify-between items-center bg-surface-container-low">
             <div class="flex items-center gap-2">
               <span class="material-symbols-outlined text-primary" aria-hidden="true">volunteer_activism</span>
               <h2 class="font-heading text-xl font-semibold text-primary" id="donation-title" data-bind="donaciones.titulo"></h2>
@@ -259,7 +259,7 @@
               <span class="material-symbols-outlined" aria-hidden="true">close</span>
             </button>
           </div>
-          <div class="p-8 overflow-y-auto space-y-8 no-scrollbar">
+          <div class="p-6 overflow-y-auto space-y-5">
             <div class="text-center">
               <p class="text-sm text-on-surface-variant mb-2" data-bind="donaciones.subtitulo"></p>
               <h3 class="font-heading text-xl font-semibold text-on-surface">Monto de la donación (COP)</h3>
@@ -267,9 +267,9 @@
             <fieldset>
               <legend class="sr-only">Frecuencia de la donación</legend>
               <div class="grid grid-cols-3 gap-2" id="frequency-selector">
-                <button class="freq-btn py-4 rounded-2xl border-2 border-primary bg-primary text-white font-bold transition-all" data-freq="Única" aria-pressed="true">Una vez</button>
-                <button class="freq-btn py-4 rounded-2xl border-2 border-outline-variant hover:border-primary text-on-surface-variant transition-all" data-freq="Mensual" aria-pressed="false">Mensual</button>
-                <button class="freq-btn py-4 rounded-2xl border-2 border-outline-variant hover:border-primary text-on-surface-variant transition-all" data-freq="Anual" aria-pressed="false">Anual</button>
+                <button class="freq-btn py-3 rounded-2xl border-2 border-primary bg-primary text-white font-bold transition-all" data-freq="Única" aria-pressed="true">Una vez</button>
+                <button class="freq-btn py-3 rounded-2xl border-2 border-outline-variant hover:border-primary text-on-surface-variant transition-all" data-freq="Mensual" aria-pressed="false">Mensual</button>
+                <button class="freq-btn py-3 rounded-2xl border-2 border-outline-variant hover:border-primary text-on-surface-variant transition-all" data-freq="Anual" aria-pressed="false">Anual</button>
               </div>
             </fieldset>
             <fieldset>
@@ -290,9 +290,9 @@
               </div>
             </div>
           </div>
-          <div class="p-6 bg-surface-container-low border-t border-outline-variant">
+          <div class="px-6 py-4 bg-surface-container-low border-t border-outline-variant">
             <button
-              class="w-full bg-primary text-white text-label-lg font-semibold py-4 rounded-full hover:scale-[1.02] active:scale-95 transition-all shadow-lg flex items-center justify-center gap-2"
+              class="w-full bg-primary text-white text-label-lg font-semibold py-3 rounded-full hover:scale-[1.02] active:scale-95 transition-all shadow-lg flex items-center justify-center gap-2"
               id="submit-donation"
             >
               <span class="material-symbols-outlined" aria-hidden="true">send</span> Enviar Mensaje

@@ -54,35 +54,25 @@
   function renderCasos(items) {
     document.getElementById("projects-carousel").innerHTML = items
       .map(
-        (c) => `<article class="flex-none w-[320px] md:w-[400px] snap-start bg-white rounded-2xl shadow-md border border-outline-variant overflow-hidden flex flex-col">
-          <div class="p-6 flex-grow">
-            <div class="flex items-center gap-4 mb-4">
-              <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
-                <span class="material-symbols-outlined" aria-hidden="true">${esc(c.icono || "star")}</span>
-              </div>
-              <div>
-                <h3 class="font-heading text-lg font-semibold leading-tight text-primary">${esc(c.titulo)}</h3>
-                <p class="text-xs text-on-surface-variant">${esc(c.organizacion || "")}</p>
-              </div>
-            </div>
-            <p class="text-sm text-on-surface-variant mb-4">${esc(c.descripcion)}</p>
-            <div class="flex flex-wrap gap-2">
-              ${(c.etiquetas || [])
-                .map(
-                  (t) => `<span class="px-3 py-1 rounded-full bg-secondary-container/20 text-on-secondary-container text-xs font-semibold">${esc(t)}</span>`
-                )
-                .join("")}
-            </div>
+        (c) => `<article class="flex-none w-[300px] md:w-[380px] snap-center bg-white rounded-2xl shadow-md border border-outline-variant overflow-hidden flex flex-col group hover:shadow-xl transition-all">
+          <div class="relative h-48 overflow-hidden bg-surface-container">
+            <img alt="${esc(c.titulo)}" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="${esc(c.imagen || "")}" />
+            ${c.categoria ? `<div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">${esc(c.categoria)}</div>` : ""}
           </div>
-          <div class="bg-surface-container-low p-6 border-t border-outline-variant flex gap-8">
-            ${(c.metricas || [])
-              .map(
-                (m) => `<div>
-                  <p class="text-primary font-bold">${esc(m.valor)}</p>
-                  <p class="text-[10px] uppercase tracking-wider text-on-surface-variant">${esc(m.etiqueta)}</p>
-                </div>`
-              )
-              .join("")}
+          <div class="p-6 flex-grow flex flex-col">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="material-symbols-outlined text-primary text-lg" aria-hidden="true">${esc(c.icono || "star")}</span>
+              <span class="text-xs font-bold text-secondary uppercase">${esc(c.organizacion || "")}</span>
+            </div>
+            <h3 class="font-heading text-lg font-semibold leading-tight text-primary mb-3">${esc(c.titulo)}</h3>
+            <p class="text-sm text-on-surface-variant mb-6">${esc(c.descripcion)}</p>
+            <div class="mt-auto pt-4 border-t border-outline-variant flex justify-between items-center">
+              <div class="flex flex-col">
+                <span class="text-xs text-on-surface-variant">${esc(c.metrica_etiqueta || "")}</span>
+                <span class="text-sm font-bold text-primary">${esc(c.metrica_valor || "")}</span>
+              </div>
+              <span class="text-xs font-medium text-on-surface-variant">${esc(c.aliado || "")}</span>
+            </div>
           </div>
         </article>`
       )
@@ -92,14 +82,16 @@
   function renderTransparencia(docs) {
     document.getElementById("transparencia-grid").innerHTML = docs
       .map((d, i) => {
-        const enlace = d.archivo
-          ? `<a class="text-primary text-sm font-semibold flex items-center gap-1 hover:underline" href="${esc(d.archivo)}" target="_blank" rel="noopener">Ver documento <span class="material-symbols-outlined text-sm" aria-hidden="true">open_in_new</span></a>`
+        const url = d.enlace || d.archivo;
+        const enlace = url
+          ? `<a class="text-primary text-sm font-semibold flex items-center gap-1 hover:underline" href="${esc(url)}" target="_blank" rel="noopener">Ver documento <span class="material-symbols-outlined text-sm" aria-hidden="true">open_in_new</span></a>`
           : `<span class="text-on-surface-variant text-sm">Disponible próximamente</span>`;
-        return `<article class="bg-surface p-6 rounded-2xl shadow-sm hover:shadow-md transition-all group fade-in-up" style="transition-delay:${i * 100}ms">
+        return `<article class="bg-surface p-6 rounded-2xl shadow-sm hover:shadow-md transition-all group fade-in-up" style="transition-delay:${(i % 4) * 100}ms">
           <div class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mb-4 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
             <span class="material-symbols-outlined" aria-hidden="true">${esc(d.icono || "description")}</span>
           </div>
           <h3 class="font-semibold mb-2">${esc(d.titulo)}</h3>
+          ${d.descripcion ? `<p class="text-sm text-on-surface-variant mb-4">${esc(d.descripcion)}</p>` : ""}
           ${enlace}
         </article>`;
       })
@@ -282,9 +274,18 @@
 
   function setupCarousel() {
     const carousel = document.getElementById("projects-carousel");
+    const prev = document.getElementById("carousel-prev");
+    const next = document.getElementById("carousel-next");
+    const wrapper = prev.parentElement;
     const step = () => (carousel.firstElementChild?.offsetWidth || 340) + 24;
-    document.getElementById("carousel-prev").addEventListener("click", () => carousel.scrollBy({ left: -step(), behavior: "smooth" }));
-    document.getElementById("carousel-next").addEventListener("click", () => carousel.scrollBy({ left: step(), behavior: "smooth" }));
+    prev.addEventListener("click", () => carousel.scrollBy({ left: -step(), behavior: "smooth" }));
+    next.addEventListener("click", () => carousel.scrollBy({ left: step(), behavior: "smooth" }));
+    // Ocultar los botones cuando todas las tarjetas caben en pantalla
+    const updateButtons = () => {
+      wrapper.classList.toggle("hidden", carousel.scrollWidth <= carousel.clientWidth + 4);
+    };
+    updateButtons();
+    window.addEventListener("resize", updateButtons);
   }
 
   function setupFadeIn() {

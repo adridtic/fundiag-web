@@ -6,56 +6,56 @@
       "titulo": "Bienes y Servicios",
       "icono": "inventory_2",
       "descripcion": "Consulta el proceso mediante el cual la organización adquiere bienes y contrata servicios.",
-      "enlace": "https://drive.google.com/file/d/13e0jo-6e3b2jsEpNUq6qCfPDVSfSYfa6/view?usp=drive_link",
+      "enlace": "https://drive.google.com/file/d/13bDyap7i1L_o87SrHGpxYbDA7p-_6Zn8/view?usp=drive_link",
       "archivo": ""
     },
     {
       "titulo": "Código de Conducta",
       "icono": "verified_user",
       "descripcion": "Conoce los principios éticos y las normas de comportamiento que guían las actuaciones de la organización.",
-      "enlace": "https://drive.google.com/file/d/1EQEIbP37axAqNL_I-scZJQw1G5kf7aBp/view?usp=drive_link",
+      "enlace": "https://drive.google.com/file/d/1TBwA-sbkijvqQmBvooi71C8yVtX3t7S8/view?usp=drive_link",
+      "archivo": ""
+    },
+    {
+      "titulo": "Código de Conducta y Políticas (documento completo)",
+      "icono": "menu_book",
+      "descripcion": "Compendio completo del código de conducta y las políticas institucionales de Fundiag.",
+      "enlace": "https://drive.google.com/file/d/1R-lPx2mrDdXDyFWJE9Xv2VlBUUug30f_/view?usp=drive_link",
       "archivo": ""
     },
     {
       "titulo": "Equidad y Género",
       "icono": "group_add",
       "descripcion": "Consulta la política que promueve la igualdad de oportunidades y la no discriminación.",
-      "enlace": "",
+      "enlace": "https://drive.google.com/file/d/1AhMzJIlde0xKcfygLRdpJFNF6YSW_zDP/view?usp=drive_link",
       "archivo": ""
     },
     {
       "titulo": "Formato de Quejas",
       "icono": "feedback",
       "descripcion": "Accede al mecanismo oficial para presentar quejas, reclamos o sugerencias.",
-      "enlace": "https://drive.google.com/file/d/1JvOUqXf4sVwqG4vHkxb0KKV_ZO38YTZp/view?usp=drive_link",
+      "enlace": "https://drive.google.com/file/d/1afKH2cYtPo0A1GKui-5CfkAuYFTfU60n/view?usp=drive_link",
       "archivo": ""
     },
     {
-      "titulo": "Inventario y Calidad",
-      "icono": "inventory",
-      "descripcion": "Accede al registro actualizado de los activos institucionales y los estándares de calidad.",
-      "enlace": "https://drive.google.com/file/d/1i-ytuy--avMIIg5lSrpWa2YqyFkWdN9m/view?usp=drive_link",
-      "archivo": ""
-    },
-    {
-      "titulo": "Política de Prevención y Corrupción",
+      "titulo": "Política de Prevención de la Corrupción",
       "icono": "gavel",
       "descripcion": "Documento que establece los mecanismos, compromisos y acciones institucionales para prevenir la corrupción.",
-      "enlace": "https://drive.google.com/file/d/1vgNnG2gJ84sVXs1SIvPirOFULLpfcUkH/view?usp=drive_link",
+      "enlace": "https://drive.google.com/file/d/1BntHRA-kCQLvX-M9Mn4JcKdGFGV_vFM2/view?usp=drive_link",
       "archivo": ""
     },
     {
       "titulo": "Prevención de Explotación y Abuso Sexual",
       "icono": "policy",
       "descripcion": "Conoce las medidas y compromisos institucionales orientados a prevenir, reportar y atender estos casos.",
-      "enlace": "",
+      "enlace": "https://drive.google.com/file/d/1omjiu_uKvdj8bxHJVrBdIsGrQwnmNHj1/view?usp=drive_link",
       "archivo": ""
     },
     {
-      "titulo": "Reglamento del Trabajo",
+      "titulo": "Reglamento de Trabajo",
       "icono": "work",
       "descripcion": "Documento que regula las condiciones laborales, los derechos y deberes del personal vinculado.",
-      "enlace": "https://drive.google.com/file/d/1FspxlWgiZz6wcPgg1OuZmbiEV9-UG3Kw/view?usp=drive_link",
+      "enlace": "https://drive.google.com/file/d/1m5ItggBNfbZTreuCWOeTK8htjzBS5meu/view?usp=drive_link",
       "archivo": ""
     }
   ]
